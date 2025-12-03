@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Sesli Şifre Kahramanları</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar hiding for cleaner UI on touch devices */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Prevent text selection for game feel */
+      body {
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Global Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes rocketFly {
+        0% { transform: translate(-100vw, 100vh) rotate(45deg); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: translate(100vw, -50vh) rotate(45deg); opacity: 0; }
+      }
+      .animate-rocket {
+        animation: rocketFly 8s linear infinite;
+      }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      .animate-twinkle {
+        animation: twinkle 3s ease-in-out infinite;
+      }
+
+      @keyframes catPeek {
+        0% { transform: translateX(-100%); }
+        10% { transform: translateX(0); }
+        40% { transform: translateX(0); }
+        50% { transform: translateX(-100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .animate-cat-peek {
+        animation: catPeek 10s ease-in-out infinite;
+      }
+
+       @keyframes catPeekRight {
+        0% { transform: translateX(100%); }
+        50% { transform: translateX(100%); }
+        60% { transform: translateX(0); }
+        90% { transform: translateX(0); }
+        100% { transform: translateX(100%); }
+      }
+      .animate-cat-peek-right {
+        animation: catPeekRight 12s ease-in-out infinite;
+      }
+
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="text-slate-800 font-sans antialiased overflow-hidden fixed inset-0">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>

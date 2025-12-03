@@ -1,0 +1,7 @@
+{
+  "name": "Şifre Kahramanları v2",
+  "description": "5-6 yaş çocuklar için eğitici, sesli ve eğlenceli bir web oyunu. Şifre çözme, hafıza kartları, yapboz ve çizim odası içerir.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
